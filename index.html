@@ -110,7 +110,7 @@
 				<!-- <a href="https://zhaofirststep.github.io/app/gsp-android.apk" target="_Blank">
 					安卓下载
 				</a> http://gspuat.sany.com.cn:8091/app-->
-				<a href="https://gsp.sany.com.cn/gsp-supplier/helpdoc/gsp-prd.apk" target="_Blank">
+				<a href="javascript:;" onclick="clickApp()">
 					安卓下载
 				</a>
 				<!-- <a href="itms-services:///?action=download-manifest&url=https://zhaofirststep.github.io/ioshttp/x5.plist"  target="_Blank">
@@ -123,4 +123,15 @@
 			<p class="version">版本:<span>v1.0.1</span></p>
 		</div>
 	</body>
+	<script type="text/javascript">
+		var ua = navigator.userAgent.toLowerCase();
+		var isWeixin = ua.indexOf('micromessenger') != -1;
+		function clickApp(){
+			if(isWeixin){
+				alert('请在浏览器页面中打开该页面');
+			}else{
+				window.open('https://gsp.sany.com.cn/gsp-supplier/helpdoc/gsp-prd.apk');
+			}
+		}
+	</script>
 </html>
