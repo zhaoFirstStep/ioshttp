@@ -114,7 +114,13 @@
 					安卓下载
 				</a>
 				<a href="itms-services:///?action=download-manifest&url=https://zhaofirststep.github.io/ioshttp/x5.plist"  target="_Blank">
-					iphone下载
+					IOS下载
+				</a>
+				<a href="javascript:;" onclick="clickApp('test')">
+					测试安卓下载
+				</a>
+				<a href="itms-services:///?action=download-manifest&url=https://zhaofirststep.github.io/ioshttp/x5.test.plist"  target="_Blank">
+					测试IOS下载
 				</a>
 				<!-- <a href="itms-services:///?action=download-manifest&url=https://gsp.sany.com.cn/gsp-supplier/helpdoc/gspapp.plist"  target="_Blank">
 					iphone下载
@@ -126,12 +132,16 @@
 	<script type="text/javascript">
 		var ua = navigator.userAgent.toLowerCase();
 		var isWeixin = ua.indexOf('micromessenger') != -1;
-		function clickApp(){
+		function clickApp(test){
 			if(isWeixin){
 				alert('请在浏览器页面中打开该页面');
 			}else{
+				var url = 'https://zhaofirststep.github.io/app/gsp-android.apk';
+				if(test === 'test'){
+					url = 'https://zhaofirststep.github.io/app/gsp-android-104.apk';
+				}
 				// window.open('https://gsp.sany.com.cn/gsp-supplier/helpdoc/gsp-prd.apk');
-				window.open('https://zhaofirststep.github.io/app/gsp-android.apk');
+				window.open(url);
 			}
 		}
 	</script>
