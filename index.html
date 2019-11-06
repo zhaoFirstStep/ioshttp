@@ -49,7 +49,7 @@
 				background-color: #840b2a; 
 			}
 			.image-outer{
-				height: 30vh;
+				height: 15vh;
 				padding-top: 30px;
 				padding-bottom: 20px;
 				display: flex;
@@ -73,7 +73,7 @@
 				display: flex;
 				width: 100%;
 				flex-flow: column;
-				height: 30vh;
+				height: 70vh;
 				justify-content: center;
 				align-items: center;
 				box-sizing: border-box;
@@ -83,7 +83,7 @@
 				width: 60%;
 				height: 40px;
 				line-height: 40px;
-				margin-bottom: 30px;
+				margin-bottom: 15px;
 				text-align: center;
 				background-color: aqua;
 				color: #FFFFFF;
@@ -122,6 +122,12 @@
 				<a href="itms-services:///?action=download-manifest&url=https://zhaofirststep.github.io/ioshttp/x5.test.plist"  target="_Blank">
 					测试IOS下载
 				</a>
+				<a href="javascript:;" onclick="clickApp('test2')">
+					测试安卓下载-90
+				</a>
+				<a href="itms-services:///?action=download-manifest&url=https://zhaofirststep.github.io/ioshttp/x5.test.90.plist"  target="_Blank">
+					测试IOS下载-90
+				</a>
 				<!-- <a href="itms-services:///?action=download-manifest&url=https://gsp.sany.com.cn/gsp-supplier/helpdoc/gspapp.plist"  target="_Blank">
 					iphone下载
 				</a> -->
@@ -139,6 +145,9 @@
 				var url = 'https://zhaofirststep.github.io/app/gsp-android.apk';
 				if(test === 'test'){
 					url = 'https://zhaofirststep.github.io/app/gsp-android-104.apk';
+				}
+				if(test === 'test2'){
+					url = 'https://zhaofirststep.github.io/app/gsp-android-90.apk';
 				}
 				// window.open('https://gsp.sany.com.cn/gsp-supplier/helpdoc/gsp-prd.apk');
 				window.open(url);
