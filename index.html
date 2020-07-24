@@ -1,157 +1,222 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-		    <meta name="apple-mobile-web-app-capable" content="yes"/><!-- 删除苹果默认的工具栏和菜单栏 -->
-		    <meta name="apple-mobile-web-app-status-bar-style" content="black"/><!-- 设置苹果工具栏颜色 -->
-		    <meta name="format-detection" content="telephone=no, email=no"/><!--忽略页面中的数字识别为电话，忽略email识别 -->
-		    <!-- 启用360浏览器的极速模式(webkit) -->
-		    <meta name="renderer" content="webkit">
-		    <!-- 避免IE使用兼容模式 -->
-		    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-		    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
-		    <meta name="HandheldFriendly" content="true">
-		    <!-- 微软的老式浏览器 -->
-		    <meta name="MobileOptimized" content="320">
-		    <!-- uc强制竖屏 -->
-		    <meta name="screen-orientation" content="portrait">
-		    <!-- QQ强制竖屏 -->
-		    <meta name="x5-orientation" content="portrait">
-		    <!-- UC强制全屏 -->
-		    <meta name="full-screen" content="yes">
-		    <!-- QQ强制全屏 -->
-		    <meta name="x5-fullscreen" content="true">
-		    <!-- UC应用模式 -->
-		    <meta name="browsermode" content="application">
-		    <!-- QQ应用模式 -->
-		    <meta name="x5-page-mode" content="app">
-		    <!-- windows phone 点击无高光 -->
-		    <meta name="msapplication-tap-highlight" content="no">
-		<style type="text/css">
-			.page{
-				position: fixed;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				min-height: 100vh;
-				background: 
-				radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.15) 30%, rgba(255,255,255,.3) 32%, rgba(255,255,255,0) 33%) 0 0,
-				radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.3) 13%, rgba(255,255,255,0) 14%) 0 0,
-				radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 17%, rgba(255,255,255,.43) 19%, rgba(255,255,255,0) 20%) 0 110px,
-				radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) -130px -170px,
-				radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) 130px 370px,
-				radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.2) 13%, rgba(255,255,255,0) 14%) 0 0,
-				linear-gradient(45deg, #343702 0%, #184500 20%, #187546 30%, #006782 40%, #0b1284 50%, #760ea1 60%, #83096e 70%, #840b2a 80%, #b13e12 90%, #e27412 100%);
-				background-size: 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100%;
-				background-color: #840b2a; 
-			}
-			.image-outer{
-				height: 15vh;
-				padding-top: 30px;
-				padding-bottom: 20px;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-			.down-load-text{
-				width: 100%;
-				text-align: center;
-				font-size: 24px;
-				color:#FFFFFF;
-			}
-			.version{
-				position: fixed;
-				bottom: 0px;
-				left: 50%;
-				font-size: 12px;
-				transform: translateX(-50%);
-			}
-			.down-class{
-				display: flex;
-				width: 100%;
-				flex-flow: column;
-				height: 70vh;
-				justify-content: center;
-				align-items: center;
-				box-sizing: border-box;
-			}
-			.down-class a{
-				text-decoration: none;
-				width: 60%;
-				height: 40px;
-				line-height: 40px;
-				margin-bottom: 15px;
-				text-align: center;
-				background-color: aqua;
-				color: #FFFFFF;
-				border-radius: 10px;
-			}
-			.version{
-				color: #FFFFFF;
-			}
-			.version span{
-				margin-left: 5px;
-				color: #FFFFFF;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="page">
-			<div class="image-outer">
-				<img src="./static/logo.png" width="100" height="90">
-			</div>
-			<div class="down-load-text">
-				GSP APP下载
-			</div>
-			<div class="down-class">
-				<!-- <a href="https://zhaofirststep.github.io/app/gsp-android.apk" target="_Blank">
-					安卓下载
-				</a> http://gspuat.sany.com.cn:8091/app-->
-				<a href="javascript:;" onclick="clickApp()">
-					安卓下载
-				</a>
-				<a href="itms-services:///?action=download-manifest&url=https://zhaofirststep.github.io/ioshttp/x5.plist"  target="_Blank">
-					IOS下载
-				</a>
-				<a href="javascript:;" onclick="clickApp('test')">
-					测试安卓下载
-				</a>
-				<a href="itms-services:///?action=download-manifest&url=https://zhaofirststep.github.io/ioshttp/x5.test.plist"  target="_Blank">
-					测试IOS下载
-				</a>
-				<a href="javascript:;" onclick="clickApp('test2')">
-					测试安卓下载-90
-				</a>
-				<a href="itms-services:///?action=download-manifest&url=https://zhaofirststep.github.io/ioshttp/x5.test.90.plist"  target="_Blank">
-					测试IOS下载-90
-				</a>
-				<!-- <a href="itms-services:///?action=download-manifest&url=https://gsp.sany.com.cn/gsp-supplier/helpdoc/gspapp.plist"  target="_Blank">
-					iphone下载
-				</a> -->
-			</div>
-			<p class="version">版本:<span>v1.0.1</span></p>
-		</div>
-	</body>
-	<script type="text/javascript">
-		var ua = navigator.userAgent.toLowerCase();
-		var isWeixin = ua.indexOf('micromessenger') != -1;
-		function clickApp(test){
-			if(isWeixin){
-				alert('请在浏览器页面中打开该页面');
-			}else{
-				var url = 'https://zhaofirststep.github.io/app/gsp-prd.apk';
-				if(test === 'test'){
-					url = 'https://zhaofirststep.github.io/app/gsp-android-104.apk';
-				}
-				if(test === 'test2'){
-					url = 'https://zhaofirststep.github.io/app/gsp-android-90.apk';
-				}
-				// window.open('https://gsp.sany.com.cn/gsp-supplier/helpdoc/gsp-prd.apk');
-				window.open(url);
-			}
-		}
-	</script>
+<html lang="zh-CN" class=" __webps__">
+
+<head>
+  <script>
+    (function () {
+      window.__devicePixelRatio__ = window.devicePixelRatio || 1;
+      if (localStorage && localStorage.getItem('__webps__') === '1') {
+        window.__webpSupport__ = true;
+        document.documentElement.className += " __webps__";
+        return;
+      }
+      var isSupportWebp = function () {
+        try {
+          return document.createElement('canvas').toDataURL('image/webp', 0.5).indexOf('data:image/webp') === 0;
+        } catch (e) {
+          return false;
+        }
+      };
+      if (isSupportWebp()) {
+        window.__webpSupport__ = true;
+        document.documentElement.className += " __webps__";
+        localStorage && localStorage.setItem('__webps__', '1');
+      }
+    })();
+  </script>
+  <meta charset="utf-8">
+  <title>下载飞书 | 飞书</title>
+  <meta name="google-site-verification" content="mE6vlIsxdAT-jHj7PreF68g4nj4oEi-xnfZiHvWAzZg">
+  <!-- 三一ico图 // todo-->
+  <link rel="shortcut icon" type="image/png" href="https://s2.pstatp.com/ee/larksuite/faviconv-new.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="title" content="下载飞书 | 飞书">
+  <meta name="description" content="下载飞书软件和App。支持Windows、Mac、iOS、Android多种操作系统。">
+  <meta name="keywords" content="下载, app下载, 飞书下载, 软件下载, 应用程序, 软件">
+  <!-- <meta name="image" content="http://sf1-ttcdn-tos.pstatp.com/obj/lark.avatar/241f0001135ef013f1640"> -->
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="下载飞书 | 飞书">
+  <meta property="og:site_name" content="飞书">
+  <meta property="og:type" content="webpage">
+  <meta property="og:url" content="https://www.feishu.cn/download?from=navigation_bar_app_download">
+  <!-- <meta property="og:image" content="https://sf1-ttcdn-tos.pstatp.com/obj/suite-public-file-cn/feishu-share-icon.png"> -->
+  <meta property="og:description" content="下载飞书软件和App。支持Windows、Mac、iOS、Android多种操作系统。">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <!--忽略页面中的数字识别为电话，忽略email识别 -->
+  <!-- 启用360浏览器的极速模式(webkit) -->
+  <meta name="renderer" content="webkit">
+  <!-- 避免IE使用兼容模式 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+  <meta name="HandheldFriendly" content="true">
+  <!-- 微软的老式浏览器 -->
+  <meta name="MobileOptimized" content="320">
+  <!-- uc强制竖屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <!-- QQ强制竖屏 -->
+  <meta name="x5-orientation" content="portrait">
+  <!-- UC强制全屏 -->
+  <meta name="full-screen" content="yes">
+  <!-- QQ强制全屏 -->
+  <meta name="x5-fullscreen" content="true">
+  <!-- UC应用模式 -->
+  <meta name="browsermode" content="application">
+  <!-- QQ应用模式 -->
+  <meta name="x5-page-mode" content="app">
+  <!-- windows phone 点击无高光 -->
+  <meta name="msapplication-tap-highlight" content="no">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+  <div class="content-wrapper">
+    <div class="background-layer"></div>
+    <main class="download-pc">
+      <div class="mac-download">
+        <h1 class="download-title" id = "download_package_text">飞书 macOS 客户端</h1>
+        <div class="download-subtitle"><a href=" "><span>同时支持 iOS，iPadOS，Android，Windows 版本</span></a ></div>
+        <div class="btn-box">
+          <div class="js-sendtrack">
+            <!-- 下载飞书链接 // todo-->
+            <a id="download_package" class="button"
+              href="https://feishudown.sany.com.cn/KA31_3.22.7_Mac-alpha681.dmg">立即下载</a ></div>
+        </div>< img src="./img/mac-pic.1d8036147a.webp" class="mac-pic" alt="">
+        <div class="download-items" id="download" name="download">
+          <div class="download-items__mac item-card">
+            <!-- 下载mac端的飞书链接 // todo-->
+            <a id="download_package_for_mac" class="download-item"
+              href="https://feishudown.sany.com.cn/KA31_3.22.7_Mac-alpha681.dmg">
+              <div class="download-item-hover">< img class="download-item-hover"
+                  src="./img/download-win-hover.1c5844e47c.svg"></div>< img class="download-item__img"
+                src="./img/download-mac.a5b5a28823.svg">
+              <div class="download-item__text" >飞书 macOS 客户端</div>
+              <div class="download-item__click">点击下载</div>
+            </a ></div>
+          <div class="download-items__win item-card">
+            <!-- windows下载链接 // todo-->
+            <a id="download_package_for_win" class="download-item"
+              href="https://feishudown.sany.com.cn/KA31_3.22.7_Win-alpha468.exe">
+              <div class="download-item-hover">< img class="download-item-hover"
+                  src="./img/download-win-hover.1c5844e47c.svg"></div>< img class="download-item__img"
+                src="./img/download-win.0a91df7cba.svg">
+              <div class="download-item__text">飞书 Windows 客户端</div>
+              <div class="download-item__click">点击下载</div>
+            </a ></div>
+          <div class="download-items__ios item-card">
+            <div class="download-item">
+              <div class="download-item-hover download-item-mobile">
+                <!-- 替换ios手机端下载二维码 // todo-->
+                < img class="download-item-hover" height="172" width="172" style="height: 86px; width: 86px;"
+                  src="./img/ios_install.png"></img></div>< img class="download-item__img"
+                src="./img/download-ios.2ee4ce48a7.svg">
+                <!--  itms-services://?action=download-manifest&url=https://feishudown.sany.com.cn/feishu.plist -->
+              <div class="download-item__text ipadAndios ">飞书 iOS &amp; iPadOS 客户端</div><a
+                class="download-item__click">扫码下载</a >
+            </div>
+          </div>
+          <div class="download-items__android item-card">
+            <div class="download-item">
+              <div class="download-item-hover download-item-mobile">
+                <!-- 替换安卓手机端下载二维码 -->
+                < img class="download-item-hover" height="172" width="172" style="height: 86px; width: 86px;"
+                  src="./img/android_install.png"></img></div>< img class="download-item__img"
+                src="./img/download-android.3e5d356fae.svg">
+              <div class="download-item__text">飞书 Android 客户端</div><a class="download-item__click">扫码下载</a >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="download-mobile">
+      <!--
+      <div class="download-logo">< img src="./img/logo.307ca25773.webp" class="download-logo-img" alt="lark"></div>
+      -->
+       <div class="download-logo">< img src="./img/feishu.png"  height="172" width="172" style="height: 86px; width: 86px;" class="download-logo-img" alt="lark"></div>
+      
+      <a id="download_package_for_mobile" class="download-btn"
+        href="https://feishudown.sany.com.cn/KA31_3.22.7_Mac-alpha681.dmg">
+        <div class=""></div><span id="download_package_for_mobile_text"></span>
+      </a >
+      <div class="download-desc">同时支持iOS，iPadOS，Android，macOS和Windows版本</div>
+      <div class="download-mobile-platform-list">< img class="download-platform-item" src="./img/ios.5f8ad7b93e.png"
+          alt="IOS">< img class="download-platform-item" src="./img/android.4216e6f97b.png" alt="IOS"><img
+          class="download-platform-item" src="./img/mac.61b8336dd2.png" alt="IOS">< img class="download-platform-item"
+          src="./img/wins.c7ef93167e.png" alt="IOS"></div>
+    </div>
+  </div>
+  <div id="alert-module"></div>
+</body>
+<script>
+
+  // ios
+  var iOS = function () {
+    var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    return iOS;
+  }
+
+  //mac
+  var MAC = function () {
+    var agent = navigator.userAgent.toLowerCase();
+    var MAC = /macintosh|mac os x/i.test(navigator.userAgent) && !window.MSStream;
+    return MAC;
+  }
+
+  // 安卓
+  var Android = function () {
+    var android = /Android/.test(navigator.userAgent) && !window.MSStream;
+    return android;
+  }
+
+  // windows pc
+  var isWindows = function () {
+    var agent = navigator.userAgent.toLowerCase();
+    if (agent.indexOf("win32") >= 0 || agent.indexOf("wow32") >= 0) {
+      return true;
+    }
+    if (agent.indexOf("win64") >= 0 || agent.indexOf("wow64") >= 0) {
+      return true;
+    }
+    return false
+  }
+  var isWeixin = function () {
+    var agent = navigator.userAgent.toLowerCase();
+    var Weixin = /micromessenger/i.test(navigator.userAgent) && !window.MSStream;
+    return Weixin
+  }
+  // todo
+  var setHref = function () {
+    var href = '';
+    var text = '';
+    if (MAC()) {
+      href = 'https://feishudown.sany.com.cn/KA31_3.22.7_Mac-alpha681.dmg';
+      text = '飞书 macOS 客户端';
+    }
+    if (iOS()) {
+      
+      href = 'itms-services://?action=download-manifest&url=https://feishudown.sany.com.cn/feishu.plist';
+      text = '飞书 iOS 客户端';
+    }
+    if (Android()) {
+      href = 'https://feishudown.sany.com.cn/KA31_3.22.7-Lark_Android.apk';
+      text = '飞书 Android 客户端';
+    }
+    if (isWindows()) {
+      href = 'https://feishudown.sany.com.cn/KA31_3.22.7_Win-alpha468.exe';
+      text = '飞书 Windows 客户端';
+    }
+
+    if (isWeixin() ) {
+      document.getElementById('alert-module').style = "display:inline-block;z-index:100000";
+    }
+    alert(navigator.userAgent.toLowerCase())
+    document.getElementById('download_package').href = href;
+    document.getElementById('download_package_for_mobile').href = href;
+    document.getElementById('download_package_text').innerText = text;
+    document.getElementById('download_package_for_mobile_text').innerText = text;
+  }
+  setHref()
+</script>
+
 </html>
