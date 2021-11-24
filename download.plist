@@ -15,7 +15,7 @@
      <string>software-package</string>
      <key>url</key>
      <!-- http或者https链接的ipa文件地址 -->
-     <string>https://cskezan-1256638985.cos.ap-guangzhou.myqcloud.com/dowiso/bxwy.ipa</string>
+     <string>https://github.com/zhaoFirstStep/app/blob/master/xuexiao.ipa</string>
 	 <!-- <string>http://gspuat.sany.com.cn:8091/app/gsp-ios.ipa</string> -->
     </dict>
     <dict>
