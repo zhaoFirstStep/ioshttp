@@ -52,7 +52,7 @@
 	<string>UDID</string>
     <key>title</key>
     <!-- 安装app时的提示信息 -->
-    <string>北鑫物业</string>
+    <string>设备使用</string>
    </dict>
   </dict>
  </array>
